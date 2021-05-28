@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/find_city_nav"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.nassweather.ui.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_findCityFragment"
+            app:destination="@id/findCityFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_weatherFragment"
+            app:destination="@id/weatherFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/findCityFragment"
+        android:name="com.example.nassweather.ui.FindCityFragment"
+        android:label="fragment_find_city"
+        tools:layout="@layout/fragment_find_city" >
+        <action
+            android:id="@+id/action_findCityFragment_to_weatherFragment"
+            app:destination="@id/weatherFragment"
+            app:popUpTo="@id/weatherFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/weatherFragment"
+        android:name="com.example.nassweather.ui.WeatherFragment"
+        android:label="fragment_weather"
+        tools:layout="@layout/fragment_weather" >
+        <action
+            android:id="@+id/action_weatherFragment_to_findCityFragment2"
+            app:destination="@id/findCityFragment"
+            app:launchSingleTop="false"
+            app:popUpTo="@id/weatherFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

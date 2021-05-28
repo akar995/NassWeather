@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">NassWeather</string>
+
+    <string name="companyRes">nass.Json</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="city">city</string>
+</resources>
