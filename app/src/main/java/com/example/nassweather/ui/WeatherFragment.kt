@@ -80,7 +80,6 @@ class WeatherFragment : Fragment() {
                 Navigation.findNavController(requireView()).navigate(R.id.action_weatherFragment_to_findCityFragment2)
 
 
-                Toast.makeText(requireContext(), "Fack you for now", Toast.LENGTH_SHORT).show()
             }
         }
         return super.onOptionsItemSelected(item)
